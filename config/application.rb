@@ -33,7 +33,7 @@ module App
     # タイムゾーン(ruby側は東京にして, DBはUTCに)
     config.time_zone = 'Tokyo'
 
-    app_host = Rails.env.test? ? 'localhost:3000' : ENV.fetch('APP_HOST')
+    app_host = Rails.env.test? ? 'localhost:3000' : ENV.fetch('APP_ROOT')
     Rails.application.routes.default_url_options = {
       host: app_host,
       protocol: app_host.match?(/localhost/) ? 'http' : 'https'
