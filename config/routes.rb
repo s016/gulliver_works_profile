@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 Rails.application.routes.draw do
   namespace :auth do
     namespace :v1 do
@@ -20,6 +21,11 @@ Rails.application.routes.draw do
     resources :industry_categories, only: :index
     resources :prefectures, only: :index
     resources :employment_statuses, only: :index
+
+    namespace accounts do
+      resources :work_histories, only: %i[index show]
+      resources :academic_histories, only: %i[index show]
+    end
   end
 
   namespace :enterprise do
