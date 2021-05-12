@@ -1,8 +1,7 @@
 class Profile < ApplicationRecord
   belongs_to :account
 
-  validates :type,
-            :first_name,
+  validates :first_name,
             :last_name,
             :first_naome_kana,
             :last_name_kana,
