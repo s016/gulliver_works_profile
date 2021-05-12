@@ -123,4 +123,3 @@ terraform_destroy: terraform_env_check
 	@${TF_CD} && terraform destroy
 terraform_fmt:
 	@cd ./terraform && terraform fmt -recursive
-

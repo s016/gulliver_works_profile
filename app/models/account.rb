@@ -10,6 +10,8 @@ class Account < ApplicationRecord
     VERIFIED = 'verified'
   end
 
+  has_one :accountprofile
+  
   has_secure_password
 
   enum email_verification_status: { unspecified: 0, requested: 1, verified: 2 }

@@ -9,6 +9,8 @@ class Ability
 
     can :read, Account
     can :manage, Account, id: account.id
+    #ここにアカウントプロフィールの権限を書く
+
     can :read, OccupationMainCategory
     can :read, OccupationSubCategory
     can :read, Occupation
