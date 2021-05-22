@@ -12527,3 +12527,2316 @@ Processing by V1::AccountsController#show as */*
 Completed 200 OK in 62ms (Views: 6.2ms | ActiveRecord: 11.1ms | Allocations: 22392)
 
 
+  [1m[36mAccount Load (3.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountprofile Load (3.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "Accountprofile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccountprofile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "Accountprofile"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccountprofile Create (7.2ms)[0m  [1m[32mINSERT INTO "profiles" ("account_id", "type") VALUES ($1, $2) RETURNING "id"[0m  [["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["type", "Accountprofile"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccountprofile Create (0.4ms)[0m  [1m[32mINSERT INTO "profiles" ("account_id", "type") VALUES ($1, $2) RETURNING "id"[0m  [["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["type", "Accountprofile"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (6.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (1.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountprofile Load (5.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "Accountprofile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccount Load (1.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountprofile Load (2.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "Accountprofile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccount Load (1.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountprofile Load (2.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "Accountprofile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccount Load (1.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountprofile Load (2.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "Accountprofile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccount Load (1.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountprofile Load (2.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "Accountprofile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccountprofile Destroy (0.4ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", "59afe606-85c7-4f94-8713-e2bdfe2d4038"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 172.21.0.1 at 2021-05-19 21:12:34 +0000
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.0ms | Allocations: 481)
+Completed 200 OK in 16ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 2640)
+
+
+Started GET "/favicon.ico" for 172.21.0.1 at 2021-05-19 21:12:35 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[36mAccount Load (7.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountprofile Load (5.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "Accountprofile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccountprofile Destroy (0.2ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", "ef276399-4c75-49b4-8e00-39d700ea554b"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/v1/prefectures" for 172.21.0.1 at 2021-05-19 21:24:58 +0000
+Processing by V1::PrefecturesController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 401 Unauthorized in 19ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 3281)
+
+
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profile" for 172.21.0.1 at 2021-05-19 21:38:59 +0000
+  
+ActionController::RoutingError (uninitialized constant V1::AccountProfileController
+Did you mean?  AccountProfilesController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+first_name: hogehoge, 
+last_name: hogehoge, 
+first_name_kana: hogehoge, 
+last_name_kana: hogehoge, 
+gender: hogehoge, 
+phone: hogehoge, 
+postal_code: hogehoge, 
+address: hogehoge, 
+date_of_birth: hogehoge, 
+biography: hogehoge
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profile" for 172.21.0.1 at 2021-05-19 21:43:49 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profile"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+id
+first_name: hogehoge, 
+last_name: hogehoge, 
+first_name_kana: hogehoge, 
+last_name_kana: hogehoge, 
+gender: hogehoge, 
+phone: hogehoge, 
+postal_code: hogehoge, 
+address: hogehoge, 
+date_of_birth: hogehoge, 
+biography: hogehoge
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profile" for 172.21.0.1 at 2021-05-19 21:44:00 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profile"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+first_name: hogehoge, 
+last_name: hogehoge, 
+first_name_kana: hogehoge, 
+last_name_kana: hogehoge, 
+gender: hogehoge, 
+phone: hogehoge, 
+postal_code: hogehoge, 
+address: hogehoge, 
+date_of_birth: hogehoge, 
+biography: hogehoge
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-19 21:50:28 +0000
+  
+ActionController::RoutingError (uninitialized constant V1::AccountProfilesController
+Did you mean?  AccountProfilesController
+               V1::AccountsController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+first_name: hogehoge, 
+last_name: hogehoge, 
+first_name_kana: hogehoge, 
+last_name_kana: hogehoge, 
+gender: hogehoge, 
+phone: hogehoge, 
+postal_code: hogehoge, 
+address: hogehoge, 
+date_of_birth: hogehoge, 
+biography: hogehoge
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (15.0ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-19 21:52:20.549753"], ["updated_at", "2021-05-19 21:52:20.549753"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-20 10:35:04 +0000
+  
+ActionController::RoutingError (uninitialized constant V1::AccountProfilesController
+Did you mean?  AccountProfilesController
+               V1::AccountsController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+first_name: hogehoge, 
+last_name: hogehoge, 
+first_name_kana: hogehoge, 
+last_name_kana: hogehoge, 
+gender: hogehoge, 
+phone: hogehoge, 
+postal_code: hogehoge, 
+address: hogehoge, 
+date_of_birth: hogehoge, 
+biography: hogehoge
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-20 10:36:59 +0000
+  
+ActionController::RoutingError (uninitialized constant V1::AccountProfilesController
+Did you mean?  AccountProfilesController
+               V1::AccountsController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+"first_name": "hogehoge", 
+"last_name": "hogehoge", 
+"first_name_kana": "hogehoge", 
+"last_name_kana": "hogehoge", 
+"gender": "hogehoge", 
+"phone": "hogehoge", 
+"postal_code": "hogehoge", 
+"address": "hogehoge", 
+"date_of_birth": "hogehoge", 
+"biography": "hogehoge"
+  [1m[36mAccount Load (4.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-20 11:43:16 +0000
+  
+ActionController::RoutingError (uninitialized constant V1::AccountProfilesController
+Did you mean?  AccountProfilesController
+               V1::AccountsController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+"accountprofile" {
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}
+
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-20 12:03:07 +0000
+  
+ActionController::RoutingError (uninitialized constant V1::AccountProfilesController
+Did you mean?  AccountProfilesController
+               V1::AccountsController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+"accountprofile" {
+    "id": "52337da8-b68d-4112-aff1-1b42ed5083c8", 
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}
+
+  [1m[36mAccount Load (3.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountprofile Load (10.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "Accountprofile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" ORDER BY "profiles"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccountprofile Create (10.4ms)[0m  [1m[32mINSERT INTO "profiles" ("account_id", "type", "first_name", "last_name", "first_name_kana", "last_name_kana", "gender", "phone", "postal_code", "address", "date_of_birth", "biography") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["type", "Accountprofile"], ["first_name", "hoge"], ["last_name", "hoge"], ["first_name_kana", "hoge"], ["last_name_kana", "hoge"], ["gender", "hoge"], ["phone", "hoge"], ["postal_code", "hoge"], ["address", "hoge"], ["date_of_birth", "hoge"], ["biography", "hoge"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" ORDER BY "profiles"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-20 12:10:16 +0000
+  
+ActionController::RoutingError (uninitialized constant V1::AccountProfilesController
+Did you mean?  AccountProfilesController
+               V1::AccountsController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles/74d409ff-a045-4a00-967f-dbfafcdb8562" for 172.21.0.1 at 2021-05-20 12:10:59 +0000
+  
+ActionController::RoutingError (uninitialized constant V1::AccountProfilesController
+Did you mean?  AccountProfilesController
+               V1::AccountsController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles/74d409ff-a045-4a00-967f-dbfafcdb8562" for 172.21.0.1 at 2021-05-20 12:12:13 +0000
+  
+ActionController::RoutingError (uninitialized constant V1::AccountProfilesController
+Did you mean?  AccountProfilesController
+               V1::AccountsController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[36mAccount Load (1.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (2.2ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-20 13:42:24.565735"], ["updated_at", "2021-05-20 13:42:24.565735"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles/74d409ff-a045-4a00-967f-dbfafcdb8562" for 172.21.0.1 at 2021-05-20 13:43:42 +0000
+  
+ActionController::RoutingError (uninitialized constant V1::AccountProfilesController
+Did you mean?  AccountProfilesController
+               V1::AccountsController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles/74d409ff-a045-4a00-967f-dbfafcdb8562" for 172.21.0.1 at 2021-05-20 14:42:05 +0000
+  
+SyntaxError (/app/app/controllers/v1/account_profiles_controller.rb:1: class/module name must be CONSTANT
+module v1
+         ^):
+  
+app/controllers/v1/account_profiles_controller.rb:1: class/module name must be CONSTANT
+app/controllers/v1/account_profiles_controller.rb:1: class/module name must be CONSTANT
+Started GET "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles/74d409ff-a045-4a00-967f-dbfafcdb8562" for 172.21.0.1 at 2021-05-20 14:42:58 +0000
+Processing by V1::AccountProfilesController#show as */*
+  Parameters: {"account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "id"=>"74d409ff-a045-4a00-967f-dbfafcdb8562"}
+  [1m[36mJti Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "ab749b18-651a-4eb2-8ebe-34ace02f8a7c"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:39:in `block in authenticate!'
+  [1m[36mAccount Load (3.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:43:in `authenticate!'
+[1mTraceback[m (most recent call last):
+	70: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+	69: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:328:in `block in run'
+	68: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:472:in `process_client'
+	67: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:713:in `handle_request'
+	66: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/configuration.rb:228:in `call'
+	65: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/engine.rb:527:in `call'
+	64: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+	63: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	62: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/static.rb:126:in `call'
+	61: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	60: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	59: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	58: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	57: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	56: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `call'
+	55: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	54: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	53: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	52: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `block in call'
+	51: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:37:in `call_app'
+	50: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	49: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+	48: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+	47: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	46: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+	45: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	44: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+	43: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/migration.rb:567:in `call'
+	42: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+	41: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:27:in `call'
+	40: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+	39: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+	38: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `serve'
+	37: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `each'
+	36: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+	35: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+	34: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+	33: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:254:in `dispatch'
+	32: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:190:in `dispatch'
+	31: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	30: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+	29: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+	28: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+	27: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	26: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	25: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	24: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+	23: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/rescue.rb:22:in `process_action'
+	22: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	21: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:134:in `run_callbacks'
+	20: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `invoke_before'
+	19: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `each'
+	18: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+	17: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:201:in `block in halting'
+	16: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+	15: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+	14: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+	13: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `instance_exec'
+	12: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:17:in `block in add_before_action'
+	11: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:33:in `load_and_authorize_resource'
+	10: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:18:in `load_resource'
+	 9: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:110:in `load_resource_instance'
+	 8: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_finder.rb:13:in `find_resource'
+	 7: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:134:in `adapter'
+	 6: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:65:in `resource_class'
+	 5: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/core_ext/string/inflections.rb:68:in `constantize'
+	 4: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `constantize'
+	 3: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `inject'
+	 2: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `each'
+	 1: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `block in constantize'
+/usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `const_get': [1muninitialized constant AccountProfile ([1;4mNameError[m[1m)
+Did you mean?  Accountprofile
+[m
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 37.5ms | Allocations: 12429)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-20 16:35:07 +0000
+Error occurred while parsing request parameters.
+Contents:
+
+"accountprofile" {
+    "id": "52337da8-b68d-4112-aff1-1b42ed5083c8", 
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}
+
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '{
+    "id": "52337da8-b68d-4112-aff1-1b42ed5083c8", 
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}
+'):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:114:in `rescue in parse_formatted_parameters'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:110:in `parse_formatted_parameters'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:389:in `block in POST'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:388:in `POST'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:278:in `_wrapper_enabled?'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+"accountprofile" {
+    "id": "52337da8-b68d-4112-aff1-1b42ed5083c8", 
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}
+
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-20 16:36:09 +0000
+Error occurred while parsing request parameters.
+Contents:
+
+"accountprofiles" {
+    "id": "52337da8-b68d-4112-aff1-1b42ed5083c8", 
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}
+
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '{
+    "id": "52337da8-b68d-4112-aff1-1b42ed5083c8", 
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}
+'):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:114:in `rescue in parse_formatted_parameters'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:110:in `parse_formatted_parameters'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:389:in `block in POST'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:388:in `POST'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:278:in `_wrapper_enabled?'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+"accountprofiles" {
+    "id": "52337da8-b68d-4112-aff1-1b42ed5083c8", 
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}
+
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-20 16:38:09 +0000
+Error occurred while parsing request parameters.
+Contents:
+
+"accountprofile" {
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}
+
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '{
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}
+'):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:114:in `rescue in parse_formatted_parameters'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:110:in `parse_formatted_parameters'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:389:in `block in POST'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:388:in `POST'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:278:in `_wrapper_enabled?'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+"accountprofile" {
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}
+
+Started GET "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles/74d409ff-a045-4a00-967f-dbfafcdb8562" for 172.21.0.1 at 2021-05-20 16:39:12 +0000
+Processing by V1::AccountProfilesController#show as */*
+  Parameters: {"account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "id"=>"74d409ff-a045-4a00-967f-dbfafcdb8562"}
+  [1m[36mJti Exists? (9.7ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "ab749b18-651a-4eb2-8ebe-34ace02f8a7c"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:39:in `block in authenticate!'
+  [1m[36mAccount Load (2.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:43:in `authenticate!'
+[1mTraceback[m (most recent call last):
+	70: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+	69: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:328:in `block in run'
+	68: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:472:in `process_client'
+	67: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:713:in `handle_request'
+	66: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/configuration.rb:228:in `call'
+	65: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/engine.rb:527:in `call'
+	64: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+	63: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	62: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/static.rb:126:in `call'
+	61: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	60: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	59: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	58: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	57: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	56: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `call'
+	55: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	54: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	53: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	52: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `block in call'
+	51: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:37:in `call_app'
+	50: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	49: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+	48: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+	47: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	46: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+	45: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	44: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+	43: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/migration.rb:567:in `call'
+	42: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+	41: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:27:in `call'
+	40: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+	39: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+	38: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `serve'
+	37: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `each'
+	36: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+	35: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+	34: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+	33: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:254:in `dispatch'
+	32: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:190:in `dispatch'
+	31: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	30: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+	29: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+	28: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+	27: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	26: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	25: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	24: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+	23: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/rescue.rb:22:in `process_action'
+	22: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	21: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:134:in `run_callbacks'
+	20: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `invoke_before'
+	19: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `each'
+	18: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+	17: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:201:in `block in halting'
+	16: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+	15: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+	14: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+	13: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `instance_exec'
+	12: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:17:in `block in add_before_action'
+	11: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:33:in `load_and_authorize_resource'
+	10: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:18:in `load_resource'
+	 9: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:110:in `load_resource_instance'
+	 8: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_finder.rb:13:in `find_resource'
+	 7: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:134:in `adapter'
+	 6: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:65:in `resource_class'
+	 5: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/core_ext/string/inflections.rb:68:in `constantize'
+	 4: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `constantize'
+	 3: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `inject'
+	 2: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `each'
+	 1: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `block in constantize'
+/usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `const_get': [1muninitialized constant AccountProfile ([1;4mNameError[m[1m)
+Did you mean?  Accountprofile
+[m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 12.2ms | Allocations: 3562)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-20 16:41:48 +0000
+Error occurred while parsing request parameters.
+Contents:
+
+
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at ': "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+'):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:114:in `rescue in parse_formatted_parameters'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:110:in `parse_formatted_parameters'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:389:in `block in POST'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:388:in `POST'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:278:in `_wrapper_enabled?'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-20 16:42:43 +0000
+Error occurred while parsing request parameters.
+Contents:
+
+"accountprofile" {
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '{
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}'):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:114:in `rescue in parse_formatted_parameters'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:110:in `parse_formatted_parameters'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:389:in `block in POST'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:388:in `POST'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:278:in `_wrapper_enabled?'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+"accountprofile" {
+    "first_name": "hogehoge", 
+    "last_name": "hogehoge", 
+    "first_name_kana": "hogehoge", 
+    "last_name_kana": "hogehoge", 
+    "gender": "hogehoge", 
+    "phone": "hogehoge", 
+    "postal_code": "hogehoge", 
+    "address": "hogehoge", 
+    "date_of_birth": "hogehoge", 
+    "biography": "hogehoge"
+}
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-20 16:44:42 +0000
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "accountprofile" {
+        "first_name": "hogehoge", 
+        "last_name": "hogehoge", 
+        "first_name_kana": "hogehoge", 
+        "last_name_kana": "hogehoge", 
+        "gender": "hogehoge", 
+        "phone": "hogehoge", 
+        "postal_code": "hogehoge", 
+        "address": "hogehoge", 
+        "date_of_birth": "hogehoge", 
+        "biography": "hogehoge"
+}
+}
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '{
+    "accountprofile" {
+        "first_name": "hogehoge", 
+        "last_name": "hogehoge", 
+        "first_name_kana": "hogehoge", 
+        "last_name_kana": "hogehoge", 
+        "gender": "hogehoge", 
+        "phone": "hogehoge", 
+        "postal_code": "hogehoge", 
+        "address": "hogehoge", 
+        "date_of_birth": "hogehoge", 
+        "biography": "hogehoge"
+}
+}'):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:114:in `rescue in parse_formatted_parameters'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:110:in `parse_formatted_parameters'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:389:in `block in POST'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:388:in `POST'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:278:in `_wrapper_enabled?'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "accountprofile" {
+        "first_name": "hogehoge", 
+        "last_name": "hogehoge", 
+        "first_name_kana": "hogehoge", 
+        "last_name_kana": "hogehoge", 
+        "gender": "hogehoge", 
+        "phone": "hogehoge", 
+        "postal_code": "hogehoge", 
+        "address": "hogehoge", 
+        "date_of_birth": "hogehoge", 
+        "biography": "hogehoge"
+}
+}
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-20 16:45:19 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 14ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 6008)
+
+
+  [1m[36mAccount Load (2.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (2.0ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-20 16:46:12.012581"], ["updated_at", "2021-05-20 16:46:12.012581"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-20 16:46:22 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}}}
+  [1m[36mJti Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "b7b65200-3621-4d0d-a31e-ebcef159f88e"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:39:in `block in authenticate!'
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:43:in `authenticate!'
+[1mTraceback[m (most recent call last):
+	70: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+	69: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:328:in `block in run'
+	68: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:472:in `process_client'
+	67: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:713:in `handle_request'
+	66: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/configuration.rb:228:in `call'
+	65: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/engine.rb:527:in `call'
+	64: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+	63: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	62: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/static.rb:126:in `call'
+	61: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	60: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	59: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	58: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	57: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	56: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `call'
+	55: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	54: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	53: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	52: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `block in call'
+	51: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:37:in `call_app'
+	50: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	49: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+	48: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+	47: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	46: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+	45: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	44: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+	43: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/migration.rb:567:in `call'
+	42: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+	41: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+	40: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+	39: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+	38: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `serve'
+	37: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `each'
+	36: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+	35: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+	34: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+	33: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:254:in `dispatch'
+	32: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:190:in `dispatch'
+	31: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	30: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+	29: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+	28: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+	27: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	26: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	25: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	24: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+	23: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/rescue.rb:22:in `process_action'
+	22: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	21: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:134:in `run_callbacks'
+	20: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `invoke_before'
+	19: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `each'
+	18: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+	17: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:201:in `block in halting'
+	16: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+	15: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+	14: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+	13: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `instance_exec'
+	12: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:17:in `block in add_before_action'
+	11: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:33:in `load_and_authorize_resource'
+	10: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:18:in `load_resource'
+	 9: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:108:in `load_resource_instance'
+	 8: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_builder.rb:8:in `build_resource'
+	 7: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:91:in `resource_base'
+	 6: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:65:in `resource_class'
+	 5: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/core_ext/string/inflections.rb:68:in `constantize'
+	 4: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `constantize'
+	 3: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `inject'
+	 2: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `each'
+	 1: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `block in constantize'
+/usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `const_get': [1muninitialized constant AccountProfile ([1;4mNameError[m[1m)
+Did you mean?  Accountprofile
+[m
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 16.7ms | Allocations: 13086)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-22 07:06:43 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 371)
+
+
+  [1m[36mAccount Load (5.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (2.9ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-22 07:07:45.507609"], ["updated_at", "2021-05-22 07:07:45.507609"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-22 07:07:59 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}}}
+  [1m[36mJti Exists? (4.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "c61b2650-4426-41f5-8c89-aa71eae1ef1d"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:39:in `block in authenticate!'
+  [1m[36mAccount Load (2.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:43:in `authenticate!'
+[1mTraceback[m (most recent call last):
+	70: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+	69: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:328:in `block in run'
+	68: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:472:in `process_client'
+	67: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:713:in `handle_request'
+	66: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/configuration.rb:228:in `call'
+	65: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/engine.rb:527:in `call'
+	64: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+	63: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	62: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/static.rb:126:in `call'
+	61: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	60: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	59: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	58: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	57: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	56: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `call'
+	55: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	54: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	53: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	52: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `block in call'
+	51: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:37:in `call_app'
+	50: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	49: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+	48: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+	47: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	46: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+	45: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	44: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+	43: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/migration.rb:567:in `call'
+	42: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+	41: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+	40: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+	39: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+	38: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `serve'
+	37: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `each'
+	36: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+	35: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+	34: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+	33: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:254:in `dispatch'
+	32: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:190:in `dispatch'
+	31: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	30: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+	29: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+	28: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+	27: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	26: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	25: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	24: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+	23: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/rescue.rb:22:in `process_action'
+	22: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	21: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:134:in `run_callbacks'
+	20: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `invoke_before'
+	19: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `each'
+	18: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+	17: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:201:in `block in halting'
+	16: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+	15: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+	14: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+	13: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `instance_exec'
+	12: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:17:in `block in add_before_action'
+	11: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:33:in `load_and_authorize_resource'
+	10: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:18:in `load_resource'
+	 9: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:108:in `load_resource_instance'
+	 8: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_builder.rb:8:in `build_resource'
+	 7: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:91:in `resource_base'
+	 6: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:65:in `resource_class'
+	 5: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/core_ext/string/inflections.rb:68:in `constantize'
+	 4: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `constantize'
+	 3: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `inject'
+	 2: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `each'
+	 1: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `block in constantize'
+/usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `const_get': [1muninitialized constant AccountProfile ([1;4mNameError[m[1m)
+Did you mean?  Accountprofile
+[m
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 6.8ms | Allocations: 3568)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-05-22 07:16:57 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}}}
+  [1m[36mJti Exists? (8.7ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "c61b2650-4426-41f5-8c89-aa71eae1ef1d"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:39:in `block in authenticate!'
+  [1m[36mAccount Load (2.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:43:in `authenticate!'
+[1mTraceback[m (most recent call last):
+	70: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+	69: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:328:in `block in run'
+	68: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:472:in `process_client'
+	67: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:713:in `handle_request'
+	66: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/configuration.rb:228:in `call'
+	65: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/engine.rb:527:in `call'
+	64: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+	63: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	62: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/static.rb:126:in `call'
+	61: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	60: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	59: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	58: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	57: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	56: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `call'
+	55: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	54: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	53: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	52: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `block in call'
+	51: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:37:in `call_app'
+	50: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	49: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+	48: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+	47: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	46: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+	45: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	44: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+	43: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/migration.rb:567:in `call'
+	42: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+	41: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+	40: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+	39: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+	38: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `serve'
+	37: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `each'
+	36: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+	35: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+	34: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+	33: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:254:in `dispatch'
+	32: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:190:in `dispatch'
+	31: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	30: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+	29: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+	28: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+	27: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	26: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	25: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	24: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+	23: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/rescue.rb:22:in `process_action'
+	22: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	21: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:134:in `run_callbacks'
+	20: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `invoke_before'
+	19: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `each'
+	18: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+	17: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:201:in `block in halting'
+	16: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+	15: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+	14: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+	13: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `instance_exec'
+	12: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:17:in `block in add_before_action'
+	11: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:33:in `load_and_authorize_resource'
+	10: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:18:in `load_resource'
+	 9: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:108:in `load_resource_instance'
+	 8: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_builder.rb:8:in `build_resource'
+	 7: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:91:in `resource_base'
+	 6: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:65:in `resource_class'
+	 5: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/core_ext/string/inflections.rb:68:in `constantize'
+	 4: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `constantize'
+	 3: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `inject'
+	 2: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `each'
+	 1: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `block in constantize'
+/usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `const_get': [1muninitialized constant AccountProfile ([1;4mNameError[m[1m)
+Did you mean?  Accountprofile
+[m
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 11.4ms | Allocations: 10861)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.18.0.1 at 2021-05-22 07:21:35 +0000
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}}}
+  [1m[36mJti Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "c61b2650-4426-41f5-8c89-aa71eae1ef1d"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:39:in `block in authenticate!'
+  [1m[36mAccount Load (3.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:43:in `authenticate!'
+[1mTraceback[m (most recent call last):
+	70: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+	69: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:328:in `block in run'
+	68: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:472:in `process_client'
+	67: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:713:in `handle_request'
+	66: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/configuration.rb:228:in `call'
+	65: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/engine.rb:527:in `call'
+	64: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+	63: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	62: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/static.rb:126:in `call'
+	61: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	60: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	59: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	58: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	57: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	56: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `call'
+	55: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	54: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	53: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	52: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `block in call'
+	51: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:37:in `call_app'
+	50: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	49: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+	48: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+	47: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	46: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+	45: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	44: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+	43: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/migration.rb:567:in `call'
+	42: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+	41: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+	40: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+	39: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+	38: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `serve'
+	37: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `each'
+	36: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+	35: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+	34: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+	33: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:254:in `dispatch'
+	32: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:190:in `dispatch'
+	31: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	30: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+	29: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+	28: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+	27: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	26: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	25: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	24: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+	23: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/rescue.rb:22:in `process_action'
+	22: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	21: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:134:in `run_callbacks'
+	20: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `invoke_before'
+	19: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `each'
+	18: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+	17: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:201:in `block in halting'
+	16: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+	15: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+	14: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+	13: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `instance_exec'
+	12: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:17:in `block in add_before_action'
+	11: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:33:in `load_and_authorize_resource'
+	10: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:18:in `load_resource'
+	 9: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:108:in `load_resource_instance'
+	 8: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_builder.rb:8:in `build_resource'
+	 7: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:91:in `resource_base'
+	 6: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:65:in `resource_class'
+	 5: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/core_ext/string/inflections.rb:68:in `constantize'
+	 4: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `constantize'
+	 3: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `inject'
+	 2: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `each'
+	 1: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `block in constantize'
+/usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `const_get': [1muninitialized constant AccountProfile ([1;4mNameError[m[1m)
+Did you mean?  Accountprofile
+[m
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 26.6ms | Allocations: 12978)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:ExceptionHandler>'
+Started GET "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles/74d409ff-a045-4a00-967f-dbfafcdb8562" for 172.18.0.1 at 2021-05-22 07:21:53 +0000
+Processing by V1::AccountProfilesController#show as */*
+  Parameters: {"account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "id"=>"74d409ff-a045-4a00-967f-dbfafcdb8562"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 921)
+
+
+  [1m[36mAccount Load (1.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.18.0.1 at 2021-05-22 07:23:50 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{"accountprofile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}}}
+  [1m[36mJti Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "c61b2650-4426-41f5-8c89-aa71eae1ef1d"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:39:in `block in authenticate!'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:43:in `authenticate!'
+[1mTraceback[m (most recent call last):
+	70: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+	69: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:328:in `block in run'
+	68: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:472:in `process_client'
+	67: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:713:in `handle_request'
+	66: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/configuration.rb:228:in `call'
+	65: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/engine.rb:527:in `call'
+	64: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+	63: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	62: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/static.rb:126:in `call'
+	61: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	60: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	59: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	58: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	57: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	56: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `call'
+	55: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	54: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	53: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	52: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `block in call'
+	51: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:37:in `call_app'
+	50: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	49: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+	48: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+	47: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	46: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+	45: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	44: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+	43: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/migration.rb:567:in `call'
+	42: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+	41: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+	40: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+	39: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+	38: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `serve'
+	37: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `each'
+	36: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+	35: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+	34: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+	33: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:254:in `dispatch'
+	32: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:190:in `dispatch'
+	31: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	30: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+	29: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+	28: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+	27: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	26: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	25: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	24: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+	23: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/rescue.rb:22:in `process_action'
+	22: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	21: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:134:in `run_callbacks'
+	20: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `invoke_before'
+	19: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `each'
+	18: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+	17: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:201:in `block in halting'
+	16: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+	15: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+	14: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+	13: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `instance_exec'
+	12: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:17:in `block in add_before_action'
+	11: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:33:in `load_and_authorize_resource'
+	10: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:18:in `load_resource'
+	 9: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:108:in `load_resource_instance'
+	 8: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_builder.rb:8:in `build_resource'
+	 7: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:91:in `resource_base'
+	 6: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:65:in `resource_class'
+	 5: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/core_ext/string/inflections.rb:68:in `constantize'
+	 4: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `constantize'
+	 3: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `inject'
+	 2: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `each'
+	 1: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `block in constantize'
+/usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `const_get': [1muninitialized constant AccountProfile ([1;4mNameError[m[1m)
+Did you mean?  Accountprofile
+[m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.8ms | Allocations: 3433)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.18.0.1 at 2021-05-22 07:24:29 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "c61b2650-4426-41f5-8c89-aa71eae1ef1d"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:39:in `block in authenticate!'
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:43:in `authenticate!'
+[1mTraceback[m (most recent call last):
+	70: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+	69: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:328:in `block in run'
+	68: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:472:in `process_client'
+	67: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:713:in `handle_request'
+	66: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/configuration.rb:228:in `call'
+	65: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/engine.rb:527:in `call'
+	64: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+	63: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	62: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/static.rb:126:in `call'
+	61: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	60: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	59: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	58: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	57: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	56: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `call'
+	55: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	54: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	53: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	52: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `block in call'
+	51: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:37:in `call_app'
+	50: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	49: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+	48: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+	47: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	46: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+	45: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	44: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+	43: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/migration.rb:567:in `call'
+	42: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+	41: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+	40: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+	39: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+	38: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `serve'
+	37: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `each'
+	36: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+	35: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+	34: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+	33: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:254:in `dispatch'
+	32: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:190:in `dispatch'
+	31: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	30: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+	29: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+	28: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+	27: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	26: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	25: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	24: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+	23: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/rescue.rb:22:in `process_action'
+	22: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	21: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:134:in `run_callbacks'
+	20: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `invoke_before'
+	19: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `each'
+	18: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+	17: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:201:in `block in halting'
+	16: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+	15: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+	14: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+	13: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `instance_exec'
+	12: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:17:in `block in add_before_action'
+	11: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:33:in `load_and_authorize_resource'
+	10: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:18:in `load_resource'
+	 9: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:108:in `load_resource_instance'
+	 8: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_builder.rb:8:in `build_resource'
+	 7: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:91:in `resource_base'
+	 6: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:65:in `resource_class'
+	 5: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/core_ext/string/inflections.rb:68:in `constantize'
+	 4: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `constantize'
+	 3: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `inject'
+	 2: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `each'
+	 1: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `block in constantize'
+/usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `const_get': [1muninitialized constant AccountProfile ([1;4mNameError[m[1m)
+Did you mean?  Accountprofile
+[m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.0ms | Allocations: 3413)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.18.0.1 at 2021-05-22 07:29:13 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "c61b2650-4426-41f5-8c89-aa71eae1ef1d"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:39:in `block in authenticate!'
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:43:in `authenticate!'
+[1mTraceback[m (most recent call last):
+	70: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+	69: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:328:in `block in run'
+	68: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:472:in `process_client'
+	67: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:713:in `handle_request'
+	66: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/configuration.rb:228:in `call'
+	65: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/engine.rb:527:in `call'
+	64: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+	63: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	62: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/static.rb:126:in `call'
+	61: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	60: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	59: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	58: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	57: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	56: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `call'
+	55: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	54: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	53: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	52: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `block in call'
+	51: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:37:in `call_app'
+	50: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	49: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+	48: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+	47: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	46: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+	45: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	44: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+	43: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/migration.rb:567:in `call'
+	42: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+	41: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+	40: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+	39: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+	38: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `serve'
+	37: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `each'
+	36: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+	35: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+	34: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+	33: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:254:in `dispatch'
+	32: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:190:in `dispatch'
+	31: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	30: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+	29: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+	28: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+	27: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	26: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	25: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	24: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+	23: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/rescue.rb:22:in `process_action'
+	22: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	21: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:134:in `run_callbacks'
+	20: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `invoke_before'
+	19: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `each'
+	18: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+	17: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:201:in `block in halting'
+	16: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+	15: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+	14: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+	13: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `instance_exec'
+	12: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:17:in `block in add_before_action'
+	11: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:33:in `load_and_authorize_resource'
+	10: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:18:in `load_resource'
+	 9: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:108:in `load_resource_instance'
+	 8: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_builder.rb:8:in `build_resource'
+	 7: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:91:in `resource_base'
+	 6: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:65:in `resource_class'
+	 5: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/core_ext/string/inflections.rb:68:in `constantize'
+	 4: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `constantize'
+	 3: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `inject'
+	 2: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `each'
+	 1: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `block in constantize'
+/usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `const_get': [1muninitialized constant AccountProfile ([1;4mNameError[m[1m)
+Did you mean?  Accountprofile
+[m
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.0ms | Allocations: 3411)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:ExceptionHandler>'
+Started GET "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles/74d409ff-a045-4a00-967f-dbfafcdb8562" for 172.18.0.1 at 2021-05-22 07:30:26 +0000
+Processing by V1::AccountProfilesController#show as */*
+  Parameters: {"account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "id"=>"74d409ff-a045-4a00-967f-dbfafcdb8562"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 9ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2391)
+
+
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.18.0.1 at 2021-05-22 07:30:39 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "c61b2650-4426-41f5-8c89-aa71eae1ef1d"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:39:in `block in authenticate!'
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:43:in `authenticate!'
+[1mTraceback[m (most recent call last):
+	70: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+	69: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:328:in `block in run'
+	68: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:472:in `process_client'
+	67: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:713:in `handle_request'
+	66: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/configuration.rb:228:in `call'
+	65: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/engine.rb:527:in `call'
+	64: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+	63: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	62: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/static.rb:126:in `call'
+	61: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	60: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	59: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	58: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	57: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	56: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `call'
+	55: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	54: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	53: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	52: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `block in call'
+	51: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:37:in `call_app'
+	50: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	49: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+	48: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+	47: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	46: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+	45: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	44: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+	43: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/migration.rb:567:in `call'
+	42: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+	41: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+	40: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+	39: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+	38: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `serve'
+	37: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `each'
+	36: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+	35: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+	34: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+	33: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:254:in `dispatch'
+	32: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:190:in `dispatch'
+	31: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	30: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+	29: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+	28: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+	27: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	26: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	25: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	24: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+	23: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/rescue.rb:22:in `process_action'
+	22: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	21: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:134:in `run_callbacks'
+	20: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `invoke_before'
+	19: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `each'
+	18: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+	17: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:201:in `block in halting'
+	16: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+	15: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+	14: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+	13: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `instance_exec'
+	12: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:17:in `block in add_before_action'
+	11: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:33:in `load_and_authorize_resource'
+	10: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:18:in `load_resource'
+	 9: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:108:in `load_resource_instance'
+	 8: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_builder.rb:8:in `build_resource'
+	 7: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:91:in `resource_base'
+	 6: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:65:in `resource_class'
+	 5: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/core_ext/string/inflections.rb:68:in `constantize'
+	 4: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `constantize'
+	 3: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `inject'
+	 2: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `each'
+	 1: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `block in constantize'
+/usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `const_get': [1muninitialized constant AccountProfile ([1;4mNameError[m[1m)
+Did you mean?  Accountprofile
+[m
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 5.1ms | Allocations: 9348)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.18.0.1 at 2021-05-22 07:32:12 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "c61b2650-4426-41f5-8c89-aa71eae1ef1d"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:39:in `block in authenticate!'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:43:in `authenticate!'
+[1mTraceback[m (most recent call last):
+	70: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+	69: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:328:in `block in run'
+	68: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:472:in `process_client'
+	67: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/server.rb:713:in `handle_request'
+	66: from /usr/local/bundle/gems/puma-4.3.6/lib/puma/configuration.rb:228:in `call'
+	65: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/engine.rb:527:in `call'
+	64: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+	63: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	62: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/static.rb:126:in `call'
+	61: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	60: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	59: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	58: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	57: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	56: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `call'
+	55: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	54: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	53: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	52: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `block in call'
+	51: from /usr/local/bundle/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:37:in `call_app'
+	50: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	49: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+	48: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+	47: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	46: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+	45: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	44: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+	43: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/migration.rb:567:in `call'
+	42: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+	41: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+	40: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+	39: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+	38: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `serve'
+	37: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `each'
+	36: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+	35: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+	34: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+	33: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:254:in `dispatch'
+	32: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:190:in `dispatch'
+	31: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	30: from /usr/local/bundle/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+	29: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+	28: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+	27: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	26: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	25: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	24: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+	23: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/action_controller/metal/rescue.rb:22:in `process_action'
+	22: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	21: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:134:in `run_callbacks'
+	20: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `invoke_before'
+	19: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `each'
+	18: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+	17: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:201:in `block in halting'
+	16: from /usr/local/bundle/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+	15: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+	14: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+	13: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:428:in `instance_exec'
+	12: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:17:in `block in add_before_action'
+	11: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:33:in `load_and_authorize_resource'
+	10: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:18:in `load_resource'
+	 9: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:108:in `load_resource_instance'
+	 8: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_builder.rb:8:in `build_resource'
+	 7: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource_loader.rb:91:in `resource_base'
+	 6: from /usr/local/bundle/gems/cancancan-3.1.0/lib/cancan/controller_resource.rb:65:in `resource_class'
+	 5: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/core_ext/string/inflections.rb:68:in `constantize'
+	 4: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `constantize'
+	 3: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `inject'
+	 2: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:280:in `each'
+	 1: from /usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `block in constantize'
+/usr/local/bundle/gems/activesupport-6.0.3.4/lib/active_support/inflector/methods.rb:282:in `const_get': [1muninitialized constant AccountProfile ([1;4mNameError[m[1m)
+Did you mean?  Accountprofile
+[m
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms | Allocations: 3396)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:ExceptionHandler>'

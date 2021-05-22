@@ -10,7 +10,7 @@ class Account < ApplicationRecord
     VERIFIED = 'verified'
   end
 
-  has_one :accountprofile
+  has_one :accountprofile, dependent: :destroy
   
   has_secure_password
 

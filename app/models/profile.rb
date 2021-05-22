@@ -1,9 +1,7 @@
 class Profile < ApplicationRecord
-  belongs_to :account
-
   validates :first_name,
             :last_name,
-            :first_naome_kana,
+            :first_name_kana,
             :last_name_kana,
             :gender,
             :phone,
@@ -11,5 +9,5 @@ class Profile < ApplicationRecord
             :address,
             :date_of_birth,
             :biography,
-            presense: true
+            presence: true
 end
