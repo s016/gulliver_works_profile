@@ -2663,6 +2663,7 @@ Migrating to CreateEmploymentStatuses (20201109102553)
   [1m[36mPrefecture Load (0.4ms)[0m  [1m[34mSELECT "prefectures".* FROM "prefectures" WHERE "prefectures"."name" = $1 LIMIT $2[0m  [["name", "宮崎県"], ["LIMIT", 1]]
   [1m[36mPrefecture Load (0.5ms)[0m  [1m[34mSELECT "prefectures".* FROM "prefectures" WHERE "prefectures"."name" = $1 LIMIT $2[0m  [["name", "鹿児島県"], ["LIMIT", 1]]
   [1m[36mPrefecture Load (0.4ms)[0m  [1m[34mSELECT "prefectures".* FROM "prefectures" WHERE "prefectures"."name" = $1 LIMIT $2[0m  [["name", "沖縄県"], ["LIMIT", 1]]
+<<<<<<< HEAD
 Started GET "/" for 172.18.0.1 at 2021-04-02 10:08:41 +0000
   
 ActiveRecord::NoDatabaseError (FATAL:  database "gulliver-works_development" does not exist
@@ -16567,3 +16568,611 @@ app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mAccountProfile Destroy (0.3ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", "05843d02-5663-4964-afcc-abcd7b038762"]]
   [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+=======
+>>>>>>> f4e9975f3f1b3a35309d20ec23eb136c4ccf59fb
+Started GET "/" for 172.19.0.1 at 2021-05-25 22:25:46 +0000
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.6ms | Allocations: 477)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 2609)
+
+
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-25 22:28:41 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge", "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 11ms (Views: 1.3ms | ActiveRecord: 7.0ms | Allocations: 2429)
+
+
+  [1m[36mAccount Load (4.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (4.0ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-25 22:29:03.923157"], ["updated_at", "2021-05-25 22:29:03.923157"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-25 22:29:16 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge", "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}}
+  [1m[36mJti Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (2.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+[1mTraceback[m (most recent call last):
+	65: from /usr/local/bundle/gems/puma-4.3.8/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+	64: from /usr/local/bundle/gems/puma-4.3.8/lib/puma/server.rb:328:in `block in run'
+	63: from /usr/local/bundle/gems/puma-4.3.8/lib/puma/server.rb:472:in `process_client'
+	62: from /usr/local/bundle/gems/puma-4.3.8/lib/puma/server.rb:718:in `handle_request'
+	61: from /usr/local/bundle/gems/puma-4.3.8/lib/puma/configuration.rb:228:in `call'
+	60: from /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/engine.rb:527:in `call'
+	59: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+	58: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	57: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/static.rb:126:in `call'
+	56: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	55: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	54: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	53: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	52: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	51: from /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/rack/logger.rb:26:in `call'
+	50: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/tagged_logging.rb:80:in `tagged'
+	49: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/tagged_logging.rb:28:in `tagged'
+	48: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	47: from /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/rack/logger.rb:26:in `block in call'
+	46: from /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/rack/logger.rb:37:in `call_app'
+	45: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	44: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+	43: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+	42: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	41: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+	40: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	39: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+	38: from /usr/local/bundle/gems/activerecord-6.0.3.7/lib/active_record/migration.rb:567:in `call'
+	37: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+	36: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+	35: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+	34: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/routing/route_set.rb:834:in `call'
+	33: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/journey/router.rb:32:in `serve'
+	32: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/journey/router.rb:32:in `each'
+	31: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+	30: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+	29: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+	28: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal.rb:254:in `dispatch'
+	27: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal.rb:190:in `dispatch'
+	26: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/abstract_controller/base.rb:136:in `process'
+	25: from /usr/local/bundle/gems/activerecord-6.0.3.7/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+	24: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+	23: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+	22: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/notifications.rb:180:in `instrument'
+	21: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	20: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/notifications.rb:180:in `block in instrument'
+	19: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+	18: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal/rescue.rb:22:in `process_action'
+	17: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	16: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/callbacks.rb:134:in `run_callbacks'
+	15: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/callbacks.rb:513:in `invoke_before'
+	14: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/callbacks.rb:513:in `each'
+	13: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+	12: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/callbacks.rb:201:in `block in halting'
+	11: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+	10: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+	 9: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/callbacks.rb:428:in `block in make_lambda'
+	 8: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/callbacks.rb:428:in `instance_exec'
+	 7: from /usr/local/bundle/gems/cancancan-3.2.1/lib/cancan/controller_resource.rb:17:in `block in add_before_action'
+	 6: from /usr/local/bundle/gems/cancancan-3.2.1/lib/cancan/controller_resource.rb:33:in `load_and_authorize_resource'
+	 5: from /usr/local/bundle/gems/cancancan-3.2.1/lib/cancan/controller_resource_loader.rb:18:in `load_resource'
+	 4: from /usr/local/bundle/gems/cancancan-3.2.1/lib/cancan/controller_resource_loader.rb:108:in `load_resource_instance'
+	 3: from /usr/local/bundle/gems/cancancan-3.2.1/lib/cancan/controller_resource_builder.rb:8:in `build_resource'
+	 2: from /usr/local/bundle/gems/activerecord-6.0.3.7/lib/active_record/inheritance.rb:56:in `new'
+	 1: from /usr/local/bundle/gems/activerecord-6.0.3.7/lib/active_record/inheritance.rb:256:in `subclass_from_attributes'
+/usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal/strong_parameters.rb:273:in `to_h': [1munable to convert unpermitted parameters to hash ([1;4mActionController::UnfilteredParameters[m[1m)
+[m
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 10.3ms | Allocations: 14068)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-26 00:12:56 +0000
+  
+SyntaxError (/app/app/controllers/v1/account_profiles_controller.rb:30: syntax error, unexpected tSYMBEG, expecting ')'
+...                              :last_name_kana
+...                              ^
+/app/app/controllers/v1/account_profiles_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+...                       :gender,
+...                              ^):
+  
+app/controllers/v1/account_profiles_controller.rb:30: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/v1/account_profiles_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+app/controllers/v1/account_profiles_controller.rb:30: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/v1/account_profiles_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-26 00:14:00 +0000
+  
+SyntaxError (/app/app/controllers/v1/account_profiles_controller.rb:30: syntax error, unexpected tSYMBEG, expecting ')'
+...                              :last_name_kana
+...                              ^
+/app/app/controllers/v1/account_profiles_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+...                       :gender,
+...                              ^):
+  
+app/controllers/v1/account_profiles_controller.rb:30: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/v1/account_profiles_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+app/controllers/v1/account_profiles_controller.rb:30: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/v1/account_profiles_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-26 00:14:27 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge", "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}}
+  [1m[36mJti Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (3.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 41.6ms | Allocations: 40773)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:18:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-26 00:15:21 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge", "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}}
+  [1m[36mJti Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.9ms | Allocations: 5152)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:18:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-26 00:17:17 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge", "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}}
+  [1m[36mJti Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 8.0ms | Allocations: 35918)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:18:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-26 00:18:35 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"id"=>"1", "first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 403 Forbidden in 69ms (Views: 1.7ms | ActiveRecord: 7.8ms | Allocations: 34839)
+
+
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-26 00:19:46 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.7ms | Allocations: 5251)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:18:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-26 00:19:51 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.2ms | Allocations: 5117)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:18:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-26 00:21:12 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"id"=>"1", "first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 403 Forbidden in 8ms (Views: 1.0ms | ActiveRecord: 0.9ms | Allocations: 3235)
+
+
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-26 00:21:26 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profiles"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{}}
+  [1m[36mJti Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 3243)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-26 00:22:09 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profiles"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{}}
+  [1m[36mJti Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.7ms | Allocations: 3250)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.19.0.1 at 2021-05-26 00:25:27 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profiles"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8", "account_profile"=>{}}
+  [1m[36mJti Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 6.3ms | Allocations: 10705)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.19.0.1 at 2021-05-26 00:27:10 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profiles"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376", "account_profile"=>{}}
+  [1m[36mJti Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.7ms | Allocations: 3243)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.19.0.1 at 2021-05-26 04:13:39 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profiles"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376", "account_profile"=>{}}
+  [1m[36mJti Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (2.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 4.8ms | Allocations: 3372)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.19.0.1 at 2021-05-26 04:35:02 +0000
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profiles"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376", "account_profile"=>{}}
+  [1m[36mJti Exists? (4.0ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "e2ccfa09-0d1e-4fab-abf6-1ad9cc733970"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (5.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 27.9ms | Allocations: 12275)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+  [1m[36mAccount Load (1.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (9.2ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-26 04:37:54.513363"], ["updated_at", "2021-05-26 04:37:54.513363"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.19.0.1 at 2021-05-26 04:38:24 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profiles"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376", "account_profile"=>{}}
+  [1m[36mJti Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "cf678272-dfb5-41bd-98d2-75ce600160f2"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms | Allocations: 3259)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mAccountProfile Load (9.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.19.0.1 at 2021-05-26 04:40:14 +0000
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profiles"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376", "account_profile"=>{}}
+  [1m[36mJti Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "cf678272-dfb5-41bd-98d2-75ce600160f2"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (3.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 21.5ms | Allocations: 12275)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+  [1m[36mAccount Load (1.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (3.2ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-26 04:43:13.445245"], ["updated_at", "2021-05-26 04:43:13.445245"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mJti Load (1.3ms)[0m  [1m[34mSELECT "jtis".* FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "08275d8f-dffa-4af8-8170-a2f85b554848"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Destroy (0.3ms)[0m  [1m[31mDELETE FROM "jtis" WHERE "jtis"."id" = $1[0m  [["id", "08275d8f-dffa-4af8-8170-a2f85b554848"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (0.3ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-26 04:44:05.703496"], ["updated_at", "2021-05-26 04:44:05.703496"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.19.0.1 at 2021-05-26 04:44:19 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profiles"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376", "account_profile"=>{}}
+  [1m[36mJti Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "8e483591-1eb6-43e7-8b7e-ed0666b3f78f"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.3ms | Allocations: 3261)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.19.0.1 at 2021-05-26 04:45:24 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"}
+  [1m[36mJti Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "8e483591-1eb6-43e7-8b7e-ed0666b3f78f"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 8.8ms | Allocations: 39882)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:18:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.19.0.1 at 2021-05-26 04:55:55 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"}
+  [1m[36mJti Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "8e483591-1eb6-43e7-8b7e-ed0666b3f78f"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (1.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 4.9ms | Allocations: 35920)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:18:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.19.0.1 at 2021-05-26 12:33:55 +0000
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 19ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 2989)
+
+
+  [1m[36mAccount Load (3.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (4.7ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-26 12:35:04.074110"], ["updated_at", "2021-05-26 12:35:04.074110"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.19.0.1 at 2021-05-26 12:35:18 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"}
+  [1m[36mJti Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "3e31d95c-f119-44dd-975c-872f92a376b9"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (2.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 13.1ms | Allocations: 43094)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:18:in `block (2 levels) in <module:ExceptionHandler>'
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountProfile Load (3.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.19.0.1 at 2021-05-26 12:51:54 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"}
+  [1m[36mJti Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "3e31d95c-f119-44dd-975c-872f92a376b9"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (2.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.19.0.1 at 2021-05-26 12:52:50 +0000
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"}
+  [1m[36mJti Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "3e31d95c-f119-44dd-975c-872f92a376b9"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (3.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.19.0.1 at 2021-05-26 13:00:31 +0000
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"}
+  [1m[36mJti Exists? (3.2ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "3e31d95c-f119-44dd-975c-872f92a376b9"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (3.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.20.0.1 at 2021-05-26 16:52:16 +0000
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/app/app/controllers/v1/account_profiles_controller.rb:28: syntax error, unexpected tSYMBEG, expecting ')'
+...                              :first_name,
+...                              ^):
+  
+app/controllers/v1/account_profiles_controller.rb:28: syntax error, unexpected tSYMBEG, expecting ')'
+app/controllers/v1/account_profiles_controller.rb:28: syntax error, unexpected tSYMBEG, expecting ')'
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.20.0.1 at 2021-05-26 16:52:44 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"}
+  [1m[36mJti Exists? (3.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "3e31d95c-f119-44dd-975c-872f92a376b9"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (3.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (1.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountProfile Load (2.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccount Load (3.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (5.2ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-26 18:19:55.651386"], ["updated_at", "2021-05-26 18:19:55.651386"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.21.0.1 at 2021-05-26 18:20:25 +0000
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"}
+  [1m[36mJti Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "690ab887-2fa8-49a4-9744-83ef94a5730e"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (1.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mAccountProfile Load (3.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/account_profiles_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 16.5ms | Allocations: 50299)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:18:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.21.0.1 at 2021-05-26 18:21:21 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"}
+  [1m[36mJti Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "690ab887-2fa8-49a4-9744-83ef94a5730e"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mAccountProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ (byebug):1:in `create'
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.22.0.1 at 2021-05-26 18:40:12 +0000
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"}
+  [1m[36mJti Exists? (3.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "690ab887-2fa8-49a4-9744-83ef94a5730e"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (3.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mAccountProfile Create (6.5ms)[0m  [1m[32mINSERT INTO "profiles" ("account_id", "type", "first_name", "last_name", "first_name_kana", "last_name_kana", "gender", "phone", "postal_code", "address", "date_of_birth", "biography") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["type", "AccountProfile"], ["first_name", "hogehoge"], ["last_name", "hogehoge"], ["first_name_kana", "hogehoge"], ["last_name_kana", "hogehoge"], ["gender", "hogehoge"], ["phone", "hogehoge"], ["postal_code", "hogehoge"], ["address", "hogehoge"], ["date_of_birth", "hogehoge"], ["biography", "hogehoge"]]
+  ↳ (byebug):1:in `create'
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mAccountProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ (byebug):1:in `create'
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.23.0.1 at 2021-05-26 18:42:46 +0000
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"}
+  [1m[36mJti Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "690ab887-2fa8-49a4-9744-83ef94a5730e"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (3.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+Started POST "/v1/accounts/83d8d7f6-4d4d-45bd-8a84-da6c1f63d376/account_profiles" for 172.24.0.1 at 2021-05-26 18:43:47 +0000
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"}
+  [1m[36mJti Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "690ab887-2fa8-49a4-9744-83ef94a5730e"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (2.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/account_profiles_controller.rb:10:in `create'
+  [1m[36mAccountProfile Create (6.9ms)[0m  [1m[32mINSERT INTO "profiles" ("account_id", "type", "first_name", "last_name", "first_name_kana", "last_name_kana", "gender", "phone", "postal_code", "address", "date_of_birth", "biography") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["type", "AccountProfile"], ["first_name", "hogehoge"], ["last_name", "hogehoge"], ["first_name_kana", "hogehoge"], ["last_name_kana", "hogehoge"], ["gender", "hogehoge"], ["phone", "hogehoge"], ["postal_code", "hogehoge"], ["address", "hogehoge"], ["date_of_birth", "hogehoge"], ["biography", "hogehoge"]]
+  ↳ app/controllers/v1/account_profiles_controller.rb:10:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/account_profiles_controller.rb:10:in `create'
+  [1m[36mAccountProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "83d8d7f6-4d4d-45bd-8a84-da6c1f63d376"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/account_profiles_controller.rb:10:in `create'
+[1mTraceback[m (most recent call last):
+	54: from /usr/local/bundle/gems/puma-4.3.8/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+	53: from /usr/local/bundle/gems/puma-4.3.8/lib/puma/server.rb:328:in `block in run'
+	52: from /usr/local/bundle/gems/puma-4.3.8/lib/puma/server.rb:472:in `process_client'
+	51: from /usr/local/bundle/gems/puma-4.3.8/lib/puma/server.rb:718:in `handle_request'
+	50: from /usr/local/bundle/gems/puma-4.3.8/lib/puma/configuration.rb:228:in `call'
+	49: from /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/engine.rb:527:in `call'
+	48: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+	47: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	46: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/static.rb:126:in `call'
+	45: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	44: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	43: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	42: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	41: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	40: from /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/rack/logger.rb:26:in `call'
+	39: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/tagged_logging.rb:80:in `tagged'
+	38: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/tagged_logging.rb:28:in `tagged'
+	37: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	36: from /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/rack/logger.rb:26:in `block in call'
+	35: from /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/rack/logger.rb:37:in `call_app'
+	34: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	33: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+	32: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+	31: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	30: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+	29: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	28: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+	27: from /usr/local/bundle/gems/activerecord-6.0.3.7/lib/active_record/migration.rb:567:in `call'
+	26: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+	25: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+	24: from /usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+	23: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/routing/route_set.rb:834:in `call'
+	22: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/journey/router.rb:32:in `serve'
+	21: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/journey/router.rb:32:in `each'
+	20: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+	19: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+	18: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+	17: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal.rb:254:in `dispatch'
+	16: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal.rb:190:in `dispatch'
+	15: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/abstract_controller/base.rb:136:in `process'
+	14: from /usr/local/bundle/gems/activerecord-6.0.3.7/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+	13: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+	12: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+	11: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/notifications.rb:180:in `instrument'
+	10: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	 9: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/notifications.rb:180:in `block in instrument'
+	 8: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+	 7: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal/rescue.rb:22:in `process_action'
+	 6: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	 5: from /usr/local/bundle/gems/activesupport-6.0.3.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+	 4: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+	 3: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal/rendering.rb:30:in `process_action'
+	 2: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/abstract_controller/base.rb:195:in `process_action'
+	 1: from /usr/local/bundle/gems/actionpack-6.0.3.7/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/app/app/controllers/v1/account_profiles_controller.rb:11:in `create': [1mundefined local variable or method `created' for #<V1::AccountProfilesController:0x0000556a5d10ac30> ([1;4mNameError[m[1m)
+Did you mean?  create
+[m
+Completed 500 Internal Server Error in 283ms (ActiveRecord: 36.9ms | Allocations: 129943)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block (2 levels) in <module:ExceptionHandler>'

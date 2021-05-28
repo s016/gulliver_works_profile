@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_11_043359) do
+ActiveRecord::Schema.define(version: 2020_11_09_102553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -119,25 +119,8 @@ ActiveRecord::Schema.define(version: 2021_04_11_043359) do
     t.index ["name"], name: "index_prefectures_on_name", unique: true
   end
 
-  create_table "profiles", id: :uuid, default: -> { "gen_random_uuid()" }, comment: "承継元プロフィール", force: :cascade do |t|
-    t.uuid "account_id"
-    t.string "type"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "first_name_kana"
-    t.string "last_name_kana"
-    t.string "gender"
-    t.string "phone"
-    t.string "postal_code"
-    t.string "address"
-    t.string "date_of_birth"
-    t.string "biography"
-    t.index ["account_id"], name: "index_profiles_on_account_id"
-  end
-
   add_foreign_key "employees", "companies"
   add_foreign_key "industries", "industry_categories"
   add_foreign_key "occupation_sub_categories", "occupation_main_categories"
   add_foreign_key "occupations", "occupation_sub_categories"
-  add_foreign_key "profiles", "accounts"
 end

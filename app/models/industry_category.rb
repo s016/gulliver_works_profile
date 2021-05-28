@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 # IndustryCategory
 class IndustryCategory < ApplicationRecord
   has_many :industries, dependent: :destroy

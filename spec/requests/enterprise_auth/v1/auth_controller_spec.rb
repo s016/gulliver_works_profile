@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 require 'rails_helper'
 
 RSpec.describe EnterpriseAuth::V1::AuthController, type: :request do
