@@ -1,14 +1,16 @@
 module V1
   class AccountProfilesController < ApplicationController
-    load_and_authorize_resource
+    load_and_authorize_resource :account
+    load_and_authorize_resource :account_profile, :throught => :account
+
     
     def index
       render json: @account_profiles
     end
 
     def create
-      @current_account.create_account_profile!(account_profile_params)
-      render json: @account_profile, status: created
+      @account.create_account_profile!(account_profile_params)
+      render json: @account_profile
     end
 
     def show
