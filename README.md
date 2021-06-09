@@ -14,3 +14,5 @@ Rails6（REST API）+ Docker + PostgreSQL
 頻出コマンドについては「make XXX」で実行できるようにしてあるので、Makefileを確認してみましょう。
 
 # テスト反映しているか確認。
+
+# 再度変更をpushする用。
