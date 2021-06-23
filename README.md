@@ -16,3 +16,4 @@ Rails6（REST API）+ Docker + PostgreSQL
 # テスト反映しているか確認。
 
 # 再度変更をpushする用。
+# 1
