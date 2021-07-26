@@ -1,7 +1,7 @@
 module V1
   class AccountProfilesController < ApplicationController
     load_and_authorize_resource :account
-    load_and_authorize_resource :account_profile, :throught => :account
+    load_and_authorize_resource :account_profile, throught: :account, singleton: true
 
     
     def index
@@ -9,9 +9,11 @@ module V1
     end
 
     def create
-      @account.create_account_profile!(account_profile_params)
+      @account_profile
       render json: @account_profile
     end
+byebug
+
 
     def show
       render json: @account_profile

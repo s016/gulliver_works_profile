@@ -17684,3 +17684,462 @@ Processing by V1::AccountProfilesController#create as */*
   [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
   ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
   [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+  [1m[36mAccount Load (3.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAccountProfile Load (12.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2 OFFSET $3[0m  [["type", "AccountProfile"], ["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAccountProfile Load (3.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2 OFFSET $3[0m  [["type", "AccountProfile"], ["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAccountProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2 OFFSET $3[0m  [["type", "AccountProfile"], ["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccountProfile Destroy (0.5ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", "b9a06ee9-08a3-46f3-9203-0981d7404032"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccountProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2 OFFSET $3[0m  [["type", "AccountProfile"], ["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (2.7ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-07-10 04:56:51.922602"], ["updated_at", "2021-07-10 04:56:51.922602"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 172.28.0.1 at 2021-07-10 05:03:39 +0000
+Started GET "/" for 172.28.0.1 at 2021-07-10 05:03:39 +0000
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendering /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.7ms | Allocations: 486)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 2976)
+
+
+  Rendered /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.1ms | Allocations: 396)
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 2944)
+
+
+Started GET "/favicon.ico" for 172.28.0.1 at 2021-07-10 05:03:39 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 172.29.0.1 at 2021-07-10 05:04:17 +0000
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.4ms | Allocations: 477)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 2609)
+
+
+Started POST "/v1/accounts/f1ec11a3-7350-4143-9e3f-a342093c2a9e/account_profiles" for 172.29.0.1 at 2021-07-10 05:04:22 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"f1ec11a3-7350-4143-9e3f-a342093c2a9e"}
+  [1m[36mJti Exists? (3.8ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "350d503f-455f-4967-bad4-4da906d6c534"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (5.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/account_profiles_controller.rb:12:in `create'
+  [1m[36mAccountProfile Create (13.3ms)[0m  [1m[32mINSERT INTO "profiles" ("account_id", "type", "first_name", "last_name", "first_name_kana", "last_name_kana", "gender", "phone", "postal_code", "address", "date_of_birth", "biography") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["type", "AccountProfile"], ["first_name", "hogehoge"], ["last_name", "hogehoge"], ["first_name_kana", "hogehoge"], ["last_name_kana", "hogehoge"], ["gender", "hogehoge"], ["phone", "hogehoge"], ["postal_code", "hogehoge"], ["address", "hogehoge"], ["date_of_birth", "hogehoge"], ["biography", "hogehoge"]]
+  ↳ app/controllers/v1/account_profiles_controller.rb:12:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/account_profiles_controller.rb:12:in `create'
+  [1m[36mAccountProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/account_profiles_controller.rb:12:in `create'
+[active_model_serializers] Rendered V1::AccountProfileSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 160ms (Views: 5.4ms | ActiveRecord: 43.9ms | Allocations: 46899)
+
+
+Started POST "/v1/accounts/f1ec11a3-7350-4143-9e3f-a342093c2a9e/account_profiles" for 172.29.0.1 at 2021-07-10 05:04:34 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"f1ec11a3-7350-4143-9e3f-a342093c2a9e"}
+  [1m[36mJti Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "350d503f-455f-4967-bad4-4da906d6c534"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/account_profiles_controller.rb:12:in `create'
+  [1m[36mAccountProfile Create (0.4ms)[0m  [1m[32mINSERT INTO "profiles" ("account_id", "type", "first_name", "last_name", "first_name_kana", "last_name_kana", "gender", "phone", "postal_code", "address", "date_of_birth", "biography") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["type", "AccountProfile"], ["first_name", "hogehoge"], ["last_name", "hogehoge"], ["first_name_kana", "hogehoge"], ["last_name_kana", "hogehoge"], ["gender", "hogehoge"], ["phone", "hogehoge"], ["postal_code", "hogehoge"], ["address", "hogehoge"], ["date_of_birth", "hogehoge"], ["biography", "hogehoge"]]
+  ↳ app/controllers/v1/account_profiles_controller.rb:12:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/account_profiles_controller.rb:12:in `create'
+  [1m[36mAccountProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/account_profiles_controller.rb:12:in `create'
+[active_model_serializers] Rendered V1::AccountProfileSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 18ms (Views: 0.9ms | ActiveRecord: 2.1ms | Allocations: 8091)
+
+
+  [1m[36mAccountProfile Load (2.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2 OFFSET $3[0m  [["type", "AccountProfile"], ["LIMIT", 1], ["OFFSET", 2]]
+Started POST "/v1/accounts/f1ec11a3-7350-4143-9e3f-a342093c2a9e/account_profiles" for 172.29.0.1 at 2021-07-18 00:14:44 +0000
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_profile"=>{"first_name"=>"hogehoge", "last_name"=>"hogehoge", "first_name_kana"=>"hogehoge", "last_name_kana"=>"hogehoge", "gender"=>"hogehoge", "phone"=>"hogehoge", "postal_code"=>"hogehoge", "address"=>"hogehoge", "date_of_birth"=>"hogehoge", "biography"=>"hogehoge"}, "account_id"=>"f1ec11a3-7350-4143-9e3f-a342093c2a9e"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 18ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 2996)
+
+
+Started GET "/" for 172.18.0.1 at 2021-07-18 00:22:39 +0000
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.6ms | Allocations: 480)
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 2633)
+
+
+Started GET "/favicon.ico" for 172.18.0.1 at 2021-07-18 00:22:40 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[36mAccount Load (4.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAccount Destroy (13.0ms)[0m  [1m[31mDELETE FROM "accounts" WHERE "accounts"."id" = $1[0m  [["id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccountProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Destroy (0.5ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", "3cbda8f3-3176-4cc1-b97a-a4ee1cc34e7b"]]
+  [1m[36mAccount Destroy (1.0ms)[0m  [1m[31mDELETE FROM "accounts" WHERE "accounts"."id" = $1[0m  [["id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAccount Load (8.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (9.0ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-07-18 23:04:44.831021"], ["updated_at", "2021-07-18 23:04:44.831021"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/f1ec11a3-7350-4143-9e3f-a342093c2a9e/account_profiles" for 172.19.0.1 at 2021-07-18 23:05:37 +0000
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (0.4ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-07-18 23:10:59.856387"], ["updated_at", "2021-07-18 23:10:59.856387"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (21.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAccountProfile Load (3.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists? (7.3ms)[0m  [1m[34mSELECT 1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "foobar@foobar.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "test3@test3.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "test333@test333.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAccount Load (5.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (6.9ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-07-23 19:56:26.271710"], ["updated_at", "2021-07-23 19:56:26.271710"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/f1ec11a3-7350-4143-9e3f-a342093c2a9e/account_profiles" for 172.20.0.1 at 2021-07-23 19:57:43 +0000
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_id"=>"f1ec11a3-7350-4143-9e3f-a342093c2a9e"}
+  [1m[36mJti Exists? (5.2ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "39823cc4-2f8f-43f0-8a1f-1f22188caa64"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (6.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 21.3ms | Allocations: 21211)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/f1ec11a3-7350-4143-9e3f-a342093c2a9e/account_profiles" for 172.20.0.1 at 2021-07-23 20:02:05 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_id"=>"f1ec11a3-7350-4143-9e3f-a342093c2a9e"}
+  [1m[36mJti Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "39823cc4-2f8f-43f0-8a1f-1f22188caa64"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.5ms | Allocations: 4869)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/f1ec11a3-7350-4143-9e3f-a342093c2a9e/account_profiles" for 172.20.0.1 at 2021-07-23 20:02:31 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_id"=>"f1ec11a3-7350-4143-9e3f-a342093c2a9e"}
+  [1m[36mJti Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "39823cc4-2f8f-43f0-8a1f-1f22188caa64"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.2ms | Allocations: 4865)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+  [1m[36mAccount Load (1.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Destroy (17.2ms)[0m  [1m[31mDELETE FROM "accounts" WHERE "accounts"."id" = $1[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"]]
+  [1m[36mAccount Load (1.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountProfile Load (1.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccount Load (1.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (0.7ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-07-23 20:16:16.766296"], ["updated_at", "2021-07-23 20:16:16.766296"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.20.0.1 at 2021-07-23 20:16:25 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "0f4d0b31-6a4a-48ee-b61d-eca573493f81"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (2.2ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 5.2ms | Allocations: 4865)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+Started GET "/" for 172.20.0.1 at 2021-07-23 20:23:04 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.8ms | Allocations: 480)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 2634)
+
+
+  [1m[36mAccount Load (2.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Destroy (6.6ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", "3cbda8f3-3176-4cc1-b97a-a4ee1cc34e7b"]]
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.20.0.1 at 2021-07-23 20:28:26 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (4.7ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "0f4d0b31-6a4a-48ee-b61d-eca573493f81"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (5.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 10.7ms | Allocations: 17752)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+  [1m[36mAccountProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 11]]
+  [1m[36mAccountProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Destroy (1.4ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", "52ca1905-4e7b-4114-bf1a-7e9fbc21194e"]]
+  [1m[36mAccountProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 11]]
+  [1m[36mAccountProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Destroy (1.3ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", "9cbf62c5-b7c5-43a7-8ad3-95d3424a2a1a"]]
+  [1m[36mAccountProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Destroy (1.5ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", "c4883cda-e6ab-4e62-aaa8-f04afbdf38df"]]
+  [1m[36mAccountProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 11]]
+  [1m[36mAccountProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 11]]
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.20.0.1 at 2021-07-23 20:30:00 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "0f4d0b31-6a4a-48ee-b61d-eca573493f81"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.5ms | Allocations: 4733)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+  [1m[36mAccountProfile Load (2.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 11]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccount Load (1.1ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (0.6ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-07-23 20:30:43.083490"], ["updated_at", "2021-07-23 20:30:43.083490"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.20.0.1 at 2021-07-23 20:31:10 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "d157403e-869e-42b0-b75d-a5b5ff6e4812"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.0ms | Allocations: 4732)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (0.5ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-07-23 20:31:48.220826"], ["updated_at", "2021-07-23 20:31:48.220826"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.20.0.1 at 2021-07-23 20:32:49 +0000
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "5416f8e6-31b8-42f5-b024-fcd2b98d21aa"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 28.9ms | Allocations: 18056)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.20.0.1 at 2021-07-23 20:33:43 +0000
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+  [1m[36mAccount Load (2.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (0.6ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-07-23 21:11:45.627948"], ["updated_at", "2021-07-23 21:11:45.627948"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccountProfile Load (3.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccount Load (3.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (5.0ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-07-23 21:21:58.639349"], ["updated_at", "2021-07-23 21:21:58.639349"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-07-23 21:24:19 +0000
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (4.1ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "8a0982d0-51d0-4c7e-af85-63619268335b"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (3.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mCACHE Account Load (0.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 17.7ms | Allocations: 21109)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+  [1m[36mAccount Load (5.0ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountProfile Load (3.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 ORDER BY "profiles"."id" ASC LIMIT $2[0m  [["type", "AccountProfile"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (2.6ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-07-23 21:38:19.237718"], ["updated_at", "2021-07-23 21:38:19.237718"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.21.0.1 at 2021-07-23 21:39:13 +0000
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mAccount Load (5.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountProfile Load (4.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (6.7ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-07-24 14:43:37.298384"], ["updated_at", "2021-07-24 14:43:37.298384"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.22.0.1 at 2021-07-24 14:44:37 +0000
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mAccount Load (3.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountProfile Load (4.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."type" = $1 AND "profiles"."account_id" = $2 LIMIT $3[0m  [["type", "AccountProfile"], ["account_id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJti Create (7.3ms)[0m  [1m[32mINSERT INTO "jtis" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-07-26 01:18:49.835903"], ["updated_at", "2021-07-26 01:18:49.835903"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.22.0.1 at 2021-07-26 01:19:24 +0000
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "4a02c45a-206a-4cb3-8cfe-d4c2a1794bf7"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (2.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 15.5ms | Allocations: 27326)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
+Started POST "/v1/accounts/52337da8-b68d-4112-aff1-1b42ed5083c8/account_profiles" for 172.22.0.1 at 2021-07-26 01:28:53 +0000
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::AccountProfilesController#create as */*
+  Parameters: {"account_id"=>"52337da8-b68d-4112-aff1-1b42ed5083c8"}
+  [1m[36mJti Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "jtis" WHERE "jtis"."id" = $1 LIMIT $2[0m  [["id", "4a02c45a-206a-4cb3-8cfe-d4c2a1794bf7"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:38:in `block in authenticate!'
+  [1m[36mAccount Load (4.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "f1ec11a3-7350-4143-9e3f-a342093c2a9e"], ["LIMIT", 1]]
+  ↳ app/models/concerns/j_w_t/authenticatable.rb:42:in `authenticate!'
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", "52337da8-b68d-4112-aff1-1b42ed5083c8"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 18.2ms | Allocations: 24807)
+
+
+  
+NameError (uninitialized constant ExceptionHandler::Raven):
+  
+app/controllers/concerns/exception_handler.rb:30:in `block (2 levels) in <module:ExceptionHandler>'
