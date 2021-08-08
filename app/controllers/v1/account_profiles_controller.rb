@@ -1,19 +1,16 @@
 module V1
   class AccountProfilesController < ApplicationController
     load_and_authorize_resource :account
-    load_and_authorize_resource :account_profile, throught: :account, singleton: true
-
+    load_and_authorize_resource :account_profile, through: :account, singleton: true
     
     def index
       render json: @account_profiles
     end
 
     def create
-      @account_profile
+      @account_profile.save!
       render json: @account_profile
     end
-byebug
-
 
     def show
       render json: @account_profile
