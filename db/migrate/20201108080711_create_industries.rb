@@ -7,5 +7,3 @@ class CreateIndustries < ActiveRecord::Migration[6.0]
       t.timestamps
     end
     add_index :industries, [:name, :industry_category_id], unique: true
-  end
-end
